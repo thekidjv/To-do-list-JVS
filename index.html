@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="Icon/icon.ico" type="image/x-icon">
+    
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="JavaScript/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="toDoList_container">
+      <header>
+        <h1>To Do List</h1>
+      </header>
+      <form id="toDoList_form">
+        <p>Adicione sua atividade:</p>
+        <div class="form-control">
+          <input
+            type="text"
+            id="toDoList_input"
+            placeholder="O que você vai fazer?"
+          />
+          <button type="submit">
+            <i class="fa-thin fa-plus"></i>
+          </button>
+          <button id="reset">
+            <i class="fa-solid fa-undo"></i>
+          </button>
+        </div>
+      </form>
+      <form id="toDoList_edit_form" class="hide">
+        <p>Edite sua atividade</p>
+        <div class="form-control">
+          <input type="text" id="toDoList_edit_input" />
+          <button type="submit">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+        </div>
+        <button id="toDoList_cancel_edit_button">Cancelar</button>
+      </form>
+      <div id="toDoList_toolbar">
+        <div id="toDoList_search">
+          <h4>Pesquisar:</h4>
+          <form>
+            <input type="text" id="toDoList_searchInput" placeholder="Buscar..." />
+            <button id="erase_button">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+        <div id="toDoList_filter">
+          <h4>Filtrar:</h4>
+          <select id="toDoList_filterSelect">
+            <option value="all">Todas</option>
+            <option value="done">Feitas</option>
+            <option value="todo">Pendentes</option>
+          </select>
+        </div>
+      </div>
+      <div id="toDoList"> 
+
+      </div> 
+    </div>
+  </body>
+</html>
